@@ -2,9 +2,13 @@ var fs = require('fs');
 var express = require('express');
 
 var app = express.createServer(express.logger());
-var response = fs.readFileSync('index.html').toString('utf-8');
 
 app.get('/', function(request, response) {
+  
+  var fs = require('fs');
+
+  // file is included here:
+  eval(fs.readFileSync('index.html')+'');
   response.send(response);
 });
 
