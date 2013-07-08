@@ -5,10 +5,9 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
   
-  var fs = require('fs');
-
   // file is included here:
-  response = eval(fs.readFileSync('index.html')+'');
+  response = fs.readFileSync('index.html').toString;
+
   response.send(response);
 });
 
