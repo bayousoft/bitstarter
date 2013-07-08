@@ -6,9 +6,8 @@ var app = express.createServer(express.logger());
 app.get('/', function(request, response) {
   
   // file is included here:
-  response = fs.readFileSync('index.html').toString;
-
-  response.send(response);
+  includefile = fs.readFileSync('index.html').toString;
+  response.send(includefile);
 });
 
 Var port = process.env.PORT || 5000;
