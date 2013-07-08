@@ -1,12 +1,11 @@
 var fs = require('fs');
-var myfile = fs.readFileSync('./index.html','utf8');
-
+//var myfile = fs.readFileSync('./index.html','utf8');
+var myfile = fs.readFileSync('./index.html');
 var express = require('express');
 
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-    hello = "hello World 2!";
     response.send(myfile);
 });
 
