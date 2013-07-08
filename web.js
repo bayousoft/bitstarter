@@ -1,4 +1,5 @@
 var fs = require('fs');
+var myfile = fs.readFileSync('./index.html','utf8');
 
 var express = require('express');
 
